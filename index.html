@@ -47,11 +47,6 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 </iframe>
 {% endif %}
 
-<h4>This is the workshop template. Delete these lines and use it to customize your own website.
-If you are running a self-organized workshop or have not put in a workshop request yet, please also fill in 
-<a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know about your workshop
-and our administrator may contact you if we need any extra information.</h4>
-
 <h2 id="general">General Information</h2>
 
 <!--
@@ -192,21 +187,13 @@ and our administrator may contact you if we need any extra information.</h4>
   to match your plans.  You may also want to change 'Day 1' and 'Day
   2' to be actual dates or days of the week.
 -->
-<h2 id="schedule">Schedule</h2>
+<h2>Registration</h2>
+<p>
+Space is limited for the event. To register,  please <a href="https://marketplace.unl.edu/default/hcc-software-carpentry-workshop-oct16th-17th-2017.html"> visit here </a>.
+</p>
 
 <!-- DO NOT EDIT SURVEY LINKS -->
-<p><em>Surveys</em></p>
-{% if page.carpentry == "swc" %} 
-<p>Please be sure to complete these surveys before and after the workshop.</p>
-<p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
-{% elsif page.carpentry == "dc" %}
-  <p>Please be sure to complete these surveys before and after the workshop.</p>
-<p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
-{% elsif page.carpentry == "lc" %}
-<p>Ask your instructor about pre- and post-workshop Survey details.</p>
-{% endif %}
+
 
 
 {% if page.carpentry == "swc" %}
@@ -227,13 +214,25 @@ and our administrator may contact you if we need any extra information.</h4>
   where 'YYYY-MM-DD-site' is the identifier for your workshop,
   e.g., '2015-06-10-esu'.
 -->
-{% if page.collaborative_notes %}
-<p id="collaborative_notes">
-  We will use this <a href="{{page.collaborative_notes}}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
+<strong>Attendee Portal:</strong> <a href="http://hcc.unl.edu/swc-history/index.html">http://hcc.unl.edu/swc-history/index.html</a>.
+  <br>
+  This Portal contains a log of shell commands entered by the instructor during the Day 1 lessons as well as an interface to the Etherpad that we will use for chatting, taking notes, and sharing URLs and bits of code.
 </p>
-{% endif %}
 
-<hr/>
+
+
+<p><em>Surveys</em></p>
+{% if page.carpentry == "swc" %} 
+<p>Please be sure to complete these surveys before and after the workshop.</p>
+<p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
+<p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
+{% elsif page.carpentry == "dc" %}
+  <p>Please be sure to complete these surveys before and after the workshop.</p>
+<p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
+<p><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
+{% elsif page.carpentry == "lc" %}
+<p>Ask your instructor about pre- and post-workshop Survey details.</p>
+{% endif %}
 
 <!--
   SYLLABUS
